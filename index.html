@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NEON//DODGE — Cyber Arcade</title>
+<meta name="description" content="NEON//DODGE — a premium cyber arcade mini game by Oltion Shumolli.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scanlines"></div><div class="cursor-glow"></div>
+<div class="shell">
+<header>
+  <div class="brand"><span class="mark">N</span><div>NEON<span>//</span>DODGE<small>CYBER ARCADE</small></div></div>
+  <div class="live"><i></i> LIVE SESSION</div>
+  <div class="header-score"><small>BEST RUN</small><b id="bestTop">000000</b></div>
+</header>
+
+<main>
+<section class="intro">
+  <div class="tag">ARCADE PROTOCOL <b>01</b></div>
+  <h1>MOVE.<br><span>DODGE.</span><br>ASCEND.</h1>
+  <p>Enter the grid. Read the storm. Build your score before the system overwhelms you.</p>
+  <div class="badges"><span>● NO ENGINE</span><span>✦ CANVAS</span><span>⌁ VANILLA JS</span></div>
+</section>
+
+<section class="game-card">
+  <div class="game-top">
+    <div><small>SCORE</small><strong id="score">000000</strong></div>
+    <div><small>LEVEL</small><strong id="level">01</strong></div>
+    <div><small>MULTIPLIER</small><strong id="mult">x1.0</strong></div>
+    <div class="state"><i></i><span id="stateText">STANDBY</span></div>
+  </div>
+
+  <div class="arena">
+    <canvas id="game" width="960" height="620"></canvas>
+    <div class="corner c1"></div><div class="corner c2"></div><div class="corner c3"></div><div class="corner c4"></div>
+
+    <div class="menu" id="menu">
+      <div class="orb">✦</div>
+      <div class="mini-label">NEON//DODGE</div>
+      <h2>BREAK THE<br><span>LIMIT.</span></h2>
+      <p>Survive the storm. Collect cores. Chase the impossible score.</p>
+      <button id="start">INITIALIZE <b>→</b></button>
+      <div class="hint">PRESS <kbd>SPACE</kbd> TO START</div>
+    </div>
+
+    <div class="menu hidden" id="pause">
+      <div class="mini-label">SYSTEM PAUSED</div><h2>HOLD<br><span>POSITION.</span></h2>
+      <button id="resume">RESUME <b>→</b></button>
+    </div>
+
+    <div class="menu hidden" id="over">
+      <div class="mini-label">RUN TERMINATED</div><h2>YOU REACHED<br><span id="endLevel">LEVEL 01.</span></h2>
+      <div class="results"><div><small>SCORE</small><b id="finalScore">0</b></div><div><small>BEST</small><b id="finalBest">0</b></div></div>
+      <button id="again">REBOOT RUN <b>↻</b></button>
+    </div>
+  </div>
+
+  <div class="game-bottom">
+    <div class="power"><span>CORE CHARGE</span><div><i id="charge"></i></div><b id="chargeText">READY</b></div>
+    <div class="controls"><kbd>←</kbd><kbd>→</kbd><span>MOVE</span><kbd>P</kbd><span>PAUSE</span></div>
+  </div>
+</section>
+</main>
+
+<section class="features">
+<article><b>01</b><h3>READ THE GRID</h3><p>Hazards accelerate with every level. Stay centered, react early.</p></article>
+<article><b>02</b><h3>HARVEST CORES</h3><p>Collect energy cores to trigger a five-second slow-motion surge.</p></article>
+<article><b>03</b><h3>BREAK RECORDS</h3><p>Your best run persists locally. There is always another level.</p></article>
+</section>
+
+<footer><span>NEON//DODGE — CYBER ARCADE</span><span>DESIGNED & DEVELOPED BY OLTION SHUMOLLI · 2026</span></footer>
+</div>
+<script src="game.js"></script>
+</body></html>
